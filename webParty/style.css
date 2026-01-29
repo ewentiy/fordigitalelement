@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+p, li, a{
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+*{
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Центрирует блок навигации */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Отступы между ссылками */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Стиль для кнопки "Войти" */
+.login {
+    margin-left: auto; /* Прижимает кнопку к правому краю */
+}
+
+.login-btn {
+    background-color: #7109AA;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #9F3ED5;
+    transform: scale(1.05);
+}
+
+/* Mobile menu (burger icon) */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .login {
+        margin-left: 0;
+    }
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.cover {
+    width: 100%;
+    height: 850px;
+    filter: brightness(60%);
+    object-fit: cover; /* Это гарантирует, что изображение будет масштабироваться без искажений */
+    border-bottom: 5px solid black;
+}
+
+.text-cover {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 47px;
+    color: white;
+    z-index: 10;
+}
+
+.text-cover2{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    color: white;
+    z-index: 10;
+
+}
+
+.text-cover2 a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.buttons {
+    text-align: center;
+}
+
+.btn-hover {
+    width: 400px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-3 {
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+
+
+/* блок 1 8 */
+
+.block1 {
+    position: relative;
+    margin-top: 110px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+    margin-left: 100px;
+}
+
+.text-block1 {
+    color: #1b2028;
+    font-size: 47px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* Отступ между карточками */
+    margin-top: 20px;
+
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    width: 300px;
+    height: 300px; /* Увеличил высоту для краткого описания */
+    background-color: #1b2028;
+    border-radius: 16px;
+    text-align: center;
+    color: #f1f3f3;
+    background-image: linear-gradient(
+            135deg,
+            rgba(117, 46, 124, 0.35),
+            rgba(115, 74, 88, 0.1) 15%,
+            #1b2028 20%,
+            #1b2028 100%
+    );
+    border: 3px solid transparent;
+    position: relative;
+}
+
+.profile:after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+    z-index: -1;
+    border-radius: 16px;
+    background-image: linear-gradient(
+            135deg,
+            #752e7c,
+            #734a58 20%,
+            #1b2028 30%,
+            #2c333e 100%
+    );
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 175px;
+    height: 175px;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-username {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+}
+
+.profile-description {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #d3d3d3; /* Светлый цвет для описания */
+    padding: 0 10px;
+}
+
+
+
+.why-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    background-image: linear-gradient(
+            135deg,
+            rgba(117, 46, 124, 0.8),
+            rgba(115, 74, 88, 0.6) 30%,
+            rgba(30, 30, 30, 0.8) 60%,
+            #1b2028 100%
+    );
+    color: #f1f3f3;
+    border-radius: 16px;
+    margin: 50px 0;
+}
+
+.why-us-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    height: 500px;
+}
+
+.why-us-text {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.why-us-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.why-us-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.why-us-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-us-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*    Авторизация  */
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Заполняет всю высоту окна */
+    background-color: #1b2028; /* Фон страницы */
+}
+
+.auth-box {
+    background-image: linear-gradient(
+            to bottom right,
+            rgba(50, 50, 50, 0.9),
+            rgba(60, 60, 60, 0.9)
+    );
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    width: 400px; /* Ширина окна */
+    color: #f1f3f3;
+    text-align: center;
+}
+
+.auth-box h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left; /* Выровнять текст по левому краю */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f1f3f3;
+    font-size: 1rem;
+}
+
+.input-group input::placeholder {
+    color: #d3d3d3; /* Цвет плейсхолдера */
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #7109AA;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-btn:hover {
+    background-color: #9F3ED5;
+}
+
+.register-prompt {
+    margin-top: 20px; /* Отступ сверху для отделения от кнопки */
+    font-size: 0.9rem;
+    color: #d3d3d3; /* Цвет текста ссылки */
+}
+
+.register-link {
+    color: #7109AA; /* Цвет ссылки */
+    text-decoration: underline; /* Подчёркивание для выделения ссылки */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Эффект изменения цвета */
+}
+
+.register-link:hover {
+    color: #9F3ED5; /* Цвет ссылки при наведении */
+}
+
+
+/* Регистрация */
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Заполняет всю высоту окна */
+    background-color: #1b2028; /* Фон страницы */
+}
+
+.register-box {
+    background-image: linear-gradient(
+            to bottom right,
+            rgba(50, 50, 50, 0.9),
+            rgba(60, 60, 60, 0.9)
+    );
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    width: 400px; /* Ширина окна */
+    color: #f1f3f3;
+    text-align: center;
+}
+
+.register-box h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left; /* Выровнять текст по левому краю */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f1f3f3;
+    font-size: 1rem;
+}
+
+.input-group input::placeholder {
+    color: #d3d3d3; /* Цвет плейсхолдера */
+}
+
+.register-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #7109AA;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #9F3ED5;
+}
+
+.login-prompt {
+    margin-top: 20px; /* Отступ сверху для отделения от кнопки */
+    font-size: 0.9rem;
+    color: #d3d3d3; /* Цвет текста ссылки */
+}
+
+.login-link {
+    color: #7109AA; /* Цвет ссылки */
+    text-decoration: underline; /* Подчёркивание для выделения ссылки */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Эффект изменения цвета */
+}
+
+.login-link:hover {
+    color: #9F3ED5; /* Цвет ссылки при наведении */
+}
